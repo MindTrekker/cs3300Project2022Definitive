@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+</style>
+<body>
+<!--- <p style="color: green"><%= notice %></p> --->
+<div id="back-banner">
+<div id="intro">
+<h1 id="page-title">My Portfolio</h1>
+
+<p>Hello, I am Grayson Mckenzie and this is my portfolio. All of my projects will be listed below.</p>
+</div>
+<div class="div-centered" id="content">
+<h2>Projects</h2>
+<div id="projects">
+  <% @projects.each do |project| %>
+    <%= render project %>
+    <p>
+      <%= link_to "Show this project", project %>
+    </p>
+  <% end %>
+</div>
+
+<a class="button" href="projects/new">Create New Project</a>
+<!--- <%= link_to "New project", new_project_path %> --->
+</div>
+</div>
+</body>
+</html>
